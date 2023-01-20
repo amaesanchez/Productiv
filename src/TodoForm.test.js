@@ -1,5 +1,4 @@
 import { render,  } from "@testing-library/react";
-import Todo from "./Todo";
 import TodoForm from "./TodoForm";
 
 // TODO: ask about how we would test components that have state-related
@@ -28,7 +27,15 @@ describe("TodoForm", function () {
     const form = container.querySelector(".NewTodoForm");
 
     expect(form).toBeInTheDocument();
-    // expect(saveMock).toBeCalled();
+    expect(saveMock).toBeCalledTimes(1);
+    //you would need to fire event to change the inputs in form for this to work
+    // this mocks that the saveMock accepts the right data
+    // were not checking to see that the save function changes the page
+    expect(saveMock).toBeCalledWith({
+      title:
+      priority
+      description
+    })
   });
 
   //to test that form submit works, test in TodoApp
