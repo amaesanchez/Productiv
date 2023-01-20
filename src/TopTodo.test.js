@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';
-import TopTodo from "./TopTodo"
+import { render } from "@testing-library/react";
+import TopTodo from "./TopTodo";
 
 const TODOS_TEST = [
   {
@@ -22,24 +22,21 @@ const TODOS_TEST = [
   },
 ];
 
-describe("render without crashing", function () {
-  it("renders without crashing", function() {
-    render(<TopTodo todos={ TODOS_TEST } />)
+describe("TopTodo", function () {
+  it("renders without crashing", function () {
+    render(<TopTodo todos={TODOS_TEST} />);
   });
-});
 
-describe("snapshot tests for stability", function () {
   it("matches snapshot", function () {
-    const { container } = render(<TopTodo todos={ TODOS_TEST } />);
+    const { container } = render(<TopTodo todos={TODOS_TEST} />);
     expect(container).toMatchSnapshot();
   });
+
+  it("Renders appropriate todo item in Top Todo area of DOM", function () {
+    const { queryByText } = render(<TopTodo todos={TODOS_TEST} />);
+
+    const todo = queryByText("Cook something healthy");
+
+    expect(todo).toBeInTheDocument();
+  });
 });
-
-it("Renders appropriate todo item in Top Todo area of DOM", function () {
-  const { queryByText } = render(<TopTodo todos={ TODOS_TEST } />);
-
-  const todo = queryByText("Cook something healthy")
-
-  expect(todo).toBeInTheDocument();
-})
-//getAllByText

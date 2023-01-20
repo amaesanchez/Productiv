@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Quote matches snapshot 1`] = `
+<div>
+  <p
+    class="quote"
+  >
+    <i>
+      Learn from yesterday, live for today, hope for tomorrow.
+       - 
+      Albert Einstein
+    </i>
+  </p>
+</div>
+`;

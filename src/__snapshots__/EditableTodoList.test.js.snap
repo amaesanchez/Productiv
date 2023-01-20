@@ -1,0 +1,271 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditableTodoList matches snapshot 1`] = `
+<div>
+  <div
+    class="EditableTodoList"
+  >
+    <div
+      class="EditableTodo"
+    >
+      <div
+        class="mb-3"
+      >
+        <div
+          class="float-end text-sm-end"
+        >
+          <button
+            class="EditableTodo-toggle btn-link btn btn-sm text-decoration-none"
+          >
+            Edit
+          </button>
+          <button
+            class="EditableTodo-delBtn btn-link btn btn-sm text-danger text-decoration-none"
+          >
+            Del
+          </button>
+        </div>
+        <div
+          class="Todo"
+        >
+          <div>
+            <b>
+              Code!
+            </b>
+             
+            <small>
+              (priority: 
+              2
+              )
+            </small>
+          </div>
+          <div>
+            <small>
+              Write some code
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="EditableTodo"
+    >
+      <div
+        class="mb-3"
+      >
+        <div
+          class="float-end text-sm-end"
+        >
+          <button
+            class="EditableTodo-toggle btn-link btn btn-sm text-decoration-none"
+          >
+            Edit
+          </button>
+          <button
+            class="EditableTodo-delBtn btn-link btn btn-sm text-danger text-decoration-none"
+          >
+            Del
+          </button>
+        </div>
+        <div
+          class="Todo"
+        >
+          <div>
+            <b>
+              Make dinner
+            </b>
+             
+            <small>
+              (priority: 
+              1
+              )
+            </small>
+          </div>
+          <div>
+            <small>
+              Cook something healthy
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="EditableTodo"
+    >
+      <div
+        class="mb-3"
+      >
+        <div
+          class="float-end text-sm-end"
+        >
+          <button
+            class="EditableTodo-toggle btn-link btn btn-sm text-decoration-none"
+          >
+            Edit
+          </button>
+          <button
+            class="EditableTodo-delBtn btn-link btn btn-sm text-danger text-decoration-none"
+          >
+            Del
+          </button>
+        </div>
+        <div
+          class="Todo"
+        >
+          <div>
+            <b>
+              Go to bed
+            </b>
+             
+            <small>
+              (priority: 
+              3
+              )
+            </small>
+          </div>
+          <div>
+            <small>
+              In bed by 11:15
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`snapshot tests for stability matches snapshot 1`] = `
+<div>
+  <div
+    class="EditableTodoList"
+  >
+    <div
+      class="EditableTodo"
+    >
+      <div
+        class="mb-3"
+      >
+        <div
+          class="float-end text-sm-end"
+        >
+          <button
+            class="EditableTodo-toggle btn-link btn btn-sm text-decoration-none"
+          >
+            Edit
+          </button>
+          <button
+            class="EditableTodo-delBtn btn-link btn btn-sm text-danger text-decoration-none"
+          >
+            Del
+          </button>
+        </div>
+        <div
+          class="Todo"
+        >
+          <div>
+            <b>
+              Code!
+            </b>
+             
+            <small>
+              (priority: 
+              2
+              )
+            </small>
+          </div>
+          <div>
+            <small>
+              Write some code
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="EditableTodo"
+    >
+      <div
+        class="mb-3"
+      >
+        <div
+          class="float-end text-sm-end"
+        >
+          <button
+            class="EditableTodo-toggle btn-link btn btn-sm text-decoration-none"
+          >
+            Edit
+          </button>
+          <button
+            class="EditableTodo-delBtn btn-link btn btn-sm text-danger text-decoration-none"
+          >
+            Del
+          </button>
+        </div>
+        <div
+          class="Todo"
+        >
+          <div>
+            <b>
+              Make dinner
+            </b>
+             
+            <small>
+              (priority: 
+              1
+              )
+            </small>
+          </div>
+          <div>
+            <small>
+              Cook something healthy
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="EditableTodo"
+    >
+      <div
+        class="mb-3"
+      >
+        <div
+          class="float-end text-sm-end"
+        >
+          <button
+            class="EditableTodo-toggle btn-link btn btn-sm text-decoration-none"
+          >
+            Edit
+          </button>
+          <button
+            class="EditableTodo-delBtn btn-link btn btn-sm text-danger text-decoration-none"
+          >
+            Del
+          </button>
+        </div>
+        <div
+          class="Todo"
+        >
+          <div>
+            <b>
+              Go to bed
+            </b>
+             
+            <small>
+              (priority: 
+              3
+              )
+            </small>
+          </div>
+          <div>
+            <small>
+              In bed by 11:15
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

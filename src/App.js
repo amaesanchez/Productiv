@@ -3,6 +3,7 @@ import TodoApp from "./TodoApp";
 import Footer from "./Footer";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
+import QuoteApp from "./QuoteApp";
 
 const INITIAL_TODOS = [
   {
@@ -37,6 +38,9 @@ function App() {
         <div className="container">
           <h1>Prøductïv</h1>
           <p className="lead">The best name in todo list management.</p>
+          <div className="text-end">
+            <QuoteApp />
+          </div>
         </div>
       </header>
       <section className="container mt-4">
