@@ -6,7 +6,7 @@ import React from "react";
  */
 function Quote({ quote }) {
   return (
-    <p className="quote"><i>{quote.text} - {quote.author}</i></p>
+    <p className="QuoteText"><i>{quote.text} - {quote.author}</i></p>
   )
 }
 

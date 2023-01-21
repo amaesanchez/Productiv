@@ -1,4 +1,4 @@
-import { render,  } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import TodoForm from "./TodoForm";
 
 // TODO: ask about how we would test components that have state-related
@@ -18,25 +18,34 @@ describe("TodoForm", function () {
     expect(container).toMatchSnapshot();
   });
 
-  it("Renders form correctly on DOM", function () {
-    const saveMock = jest.fn();
+  it("renders form correctly on DOM", function () {
     const { container } = render(
-      <TodoForm save={saveMock} initialFormData={{ title: "", description: "", priority: 1 }} />
+      <TodoForm initialFormData={{ title: "", description: "", priority: 1 }} />
     );
 
     const form = container.querySelector(".NewTodoForm");
 
     expect(form).toBeInTheDocument();
-    expect(saveMock).toBeCalledTimes(1);
-    //you would need to fire event to change the inputs in form for this to work
-    // this mocks that the saveMock accepts the right data
-    // were not checking to see that the save function changes the page
-    expect(saveMock).toBeCalledWith({
-      title:
-      priority
-      description
-    })
   });
 
-  //to test that form submit works, test in TodoApp
+  it("should invoke save prop method when form is submitted", function () {
+    const saveMock = jest.fn();
+
+    render(
+      <TodoForm
+        save={saveMock}
+        initialFormData={{ title: "test", description: "testing", priority: 1 }}
+      />
+    );
+
+    const goBtn = screen.getByText("Gø!");
+    fireEvent.click(goBtn);
+
+    expect(saveMock).toBeCalledWith({
+      title: "test",
+      description: "testing",
+      priority: 1,
+    });
+    expect(saveMock).toBeCalledTimes(1);
+  });
 });

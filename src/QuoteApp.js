@@ -17,19 +17,22 @@ function QuoteApp() {
   const [quote, setQuote] = useState({ text: "", author: "" });
 
   async function getQuote() {
-    const resp = await axios.get(`${BASE_URL}/random`)
-    setQuote(resp.data.quote)
+    const resp = await axios.get(`${BASE_URL}/random`);
+    setQuote(resp.data.quote);
   }
 
   return (
-    <>
+    <div className="QuoteApp">
       {quote.text.length !== 0 && <Quote quote={quote} />}
-      <button className="quoteBtn mb-3 btn btn-light text-secondary" onClick={getQuote}>
+      <button
+        className="quoteBtn mb-3 btn btn-light text-secondary"
+        onClick={getQuote}
+      >
         {quote.text.length === 0
           ? "Click here for an inspirational quote!"
           : "New quote"}
       </button>
-    </>
+    </div>
   );
 }
 

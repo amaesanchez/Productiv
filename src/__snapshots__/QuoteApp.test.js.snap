@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuoteApp matches snapshot 1`] = `
+<div>
+  <div
+    class="QuoteApp"
+  >
+    <button
+      class="quoteBtn mb-3 btn btn-light text-secondary"
+    >
+      Click here for an inspirational quote!
+    </button>
+  </div>
+</div>
+`;
