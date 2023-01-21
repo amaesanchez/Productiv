@@ -14,20 +14,19 @@ describe("QuoteApp", function () {
   it("Renders button for fetching quote", function () {
     const { container } = render(<QuoteApp />);
 
-    const quoteBtn = container.querySelector(".quoteBtn")
+    const quoteBtn = container.querySelector(".quoteBtn");
     expect(quoteBtn).toBeInTheDocument();
   });
 
   //TODO: figure out why button callback doesn't seem to be working
 
-  // it("Renders quote after button is clicked", function () {
-  //   const { container, debug } = render(<QuoteApp />);
-  //   const getQuote = jest.fn()
+  it("Renders quote after button is clicked", async function () {
+    render(<QuoteApp />);
 
-  //   const quoteBtn = screen.getByText("Click here for an inspirational quote!")
-  //   debug(container);
-  //   fireEvent.click(quoteBtn)
+    const quoteBtn = screen.getByText("Click here for an inspirational quote!");
+    fireEvent.click(quoteBtn);
 
-  //   expect(getQuote).toBeCalled();
-  // });
+    const quote = await screen.findByText(/-/)
+    expect(quote).toBeInTheDocument();
+  });
 });
