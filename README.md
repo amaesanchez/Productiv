@@ -10,7 +10,7 @@ Swedish to-do app with features for prioritizing tasks and retrieving randomized
     npm install
     npm start
     ```
-Open [localhost:3000](https://localhost:3000) in browser to view.
+Open [localhost:3000](http://localhost:3000/) in browser to view.
 
 ## TODO:
 - [ ] Add more tests
